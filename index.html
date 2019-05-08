@@ -21,7 +21,11 @@
     <body>
         <h1 style="margin: 20px 0">My First Runner Game.</h1>
 
-        <script defer src="main.js"></script>
+        <script>
+            window.addEventListener( 'load', function() {
+                this.runnerGame();
+            });
+        </script>
 
     </body>
 </html>
