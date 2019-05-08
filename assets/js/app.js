@@ -3,7 +3,7 @@ import Vector from './modules/vector.js';
 import viewPort from './modules/view-port.js';
 import scene from './controllers/scene.js';
 
-window.runnerGame = function () {
+export default function runnerGame () {
     console.warn('initial game');
     const gameplay = gameSettings();
 
@@ -14,8 +14,6 @@ window.runnerGame = function () {
         activeScene.size = new Vector(gameplay.canvasSize.width, gameplay.canvasSize.height);
         view.init(activeScene);
     });
-
-    console.log(gameplay)
 
     document.addEventListener('keyup', function (e) {
         if(e.code === 'Space'){
